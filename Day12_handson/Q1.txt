@@ -1,0 +1,98 @@
+
+ 1)TableName: Employee
+ Test the table creation by viewing the structure using describe command
+ Name Null Type
+ ------------------------------ -------- ------------------------------
+
+ EMPLOYEE_ID int(6)
+ FIRST_NAME VARCHAR(20)
+ LAST_NAME VARCHAR(25)
+ DEPARTMENT_ID int(4)
+ SALARY double
+
+ 2) Insert one record without listing the column names in the insert statement. Check whether data is inserted
+
+ Eg:
+
+ employee_id first_name last_name department_id salary
+
+ 201 Michael Hartstein 20 13000
+
+ 3)
+
+ Insert one record without listing the column names in the insert statement where salary value remain undetermined. 
+Check whether data is inserted
+
+ Eg:
+
+ employee_id first_name last_name department_id salary
+
+ 201 Michael Hartstein 20 13000
+
+ 202 Pat Fay 20 (null)
+
+ 4)
+
+ Insert one record with listing the column names avoiding salary column in the insert statement where salary value 
+remain undetermined. Check whether data is inserted
+
+ employee_id first_name last_name department_id salary
+
+ 201 Michael Hartstein 20 13000
+
+ 202 Pat Fay 20 (null)
+
+ 203 Susan Mavris 40 (null)
+
+ 5)
+
+ Use the above Script to insert the below given records
+
+ employee_id first_name last_name department_id salary
+
+ 205 Shelley Higgins 110 12000
+
+ 100 Steven King 90 24000
+
+ 101 Neena Kochhar 90 17000
+
+ (102 ,'Lex', 'De Haan',90,17000)
+
+ (111,'Ismael','Sciarra',100,7700)
+
+ (112,'Jose' ,'Manuel Urman' ,100, 7800)
+
+ (204 ,'Hermann' ,'Baer' ,70 ,10000)
+
+ 6)
+
+ Create a query to increase salary by 10% for all employees in dept 90.
+
+ 7)
+
+ Create a query to update Last_name of emp 202 to Higgins.
+
+ 8)
+
+ Delete employees whose name either first or last name has char seq of ‘man’
+
+-----------------------------------------------------------------------------------Solution---------------------------------------
+
+Solution: show databases;
+		use gl;
+		show tables;
+		create table Employee(Employee_id int(6),First_Name varchar(20),Last_name varchar(25),Department_id int(4),Salary double);
+		Desc Employee;
+		system cls;
+ 		insert into employee values( 201,'Michael', 'Hartstein' ,20, 13000);
+		 select * from employee;
+		insert into employee values(202,'Pat','Fay',20,null);	
+		insert into employee values(  203 ,'Susan', 'Mavris' ,40,null);
+		insert into employee values(205 ,'Shelley','Higgins',110,12000),
+(100,'Steven','King',90,24000),(101,'Neena','Kochhar',90,17000);
+		insert into employee values (102 ,'Lex', 'De Haan',90,17000),(111,'Ismael','Sciarra',100,7700),
+						(112,'Jose' ,'Manuel Urman' ,100, 7800),(204 ,'Hermann' ,'Baer' ,70 ,10000);
+		update employee set Salary = Salary+(Salary*10/100) where Department_id=90;
+ 		update Employee set Last_name='Higgins' where Employee_id=20;
+		delete from Employee
+    -> 		where First_Name like '%man%' OR Last_Name like '%man%';
