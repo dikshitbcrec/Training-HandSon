@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<!--  <bean id="e" class="com.Question.Question"> -->
+<!-- this for getter and setter Methd -->
+<!--  <property name="eno" value="20"></property>
+///<property name="ename" value="Dikshit"></property>   
+///<property name="sal" value="45000"></property>-->
+
+<!-- this for constructor  Methd -->
+<!--  
+<constructor-arg name="id" value="11"></constructor-arg>
+<constructor-arg name="name" value="pankaj"></constructor-arg>
+<constructor-arg name="address" ref="add"></constructor-arg>
+</bean>
+<bean id="add" class="com.SpringCore_Day16.Address">
+
+<constructor-arg name="city" value="hyderabad"></constructor-arg>
+<constructor-arg name="state" value="telangana"></constructor-arg>
+<constructor-arg name="country" value="India"></constructor-arg>
+-->
+<!--  
+<constructor-arg name="id" value="11"></constructor-arg>
+<constructor-arg name="name" value="what is java"></constructor-arg>
+<constructor-arg name="answers">
+<set>
+<value>java is a programming Language</value>
+<value>java is platform independent</value>
+<value>java is platform independent</value>
+<value>java supports OOP'S</value>
+<value>java is for developing web applications</value>
+</set>
+
+</constructor-arg>
+-->
+<!--  
+<bean id="ans1" class="com.Answer.Answer">
+<constructor-arg value="1"></constructor-arg>
+<constructor-arg value="Java is a programming language"></constructor-arg>
+<constructor-arg value="John"></constructor-arg>
+</bean>
+
+<bean id="ans2" class="com.Answer.Answer">
+<constructor-arg value="2"></constructor-arg>
+<constructor-arg value="Java is a Platform"></constructor-arg>
+<constructor-arg value="Ravi"></constructor-arg>
+</bean>
+
+<bean id="q" class="com.Question.Question">
+<constructor-arg value="111"></constructor-arg>
+<constructor-arg value="What is java?"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="ans1"/>
+<ref bean="ans2"/>
+</list>
+</constructor-arg>
+
+</bean>
+</beans>
+-->
+<!-- 
+<bean id="q" class="com.Question.Question">
+<constructor-arg value="11"></constructor-arg>
+<constructor-arg value="What is Java?"></constructor-arg>
+<constructor-arg>
+
+<map>
+<entry key="Java is a Programming Language" value="Ajay Kumar"></entry>
+<entry key="Java is a Platform" value="John Smith"></entry>
+<entry key="Java is an Island" value="Raj Kumar"></entry>
+</map>
+
+</constructor-arg>
+
+</bean>
+
+</beans>
+ -->
+  <bean id="answer1" class="com.Answer.Answer">
+
+<constructor-arg value="1"></constructor-arg>
+
+<constructor-arg value="Java is a Programming Language"></constructor-arg>
+
+<constructor-arg value="12/12/2001"></constructor-arg>
+
+</bean>
+
+<bean id="answer2" class="com.Answer.Answer">
+
+<constructor-arg value="2"></constructor-arg>
+
+<constructor-arg value="Java is a Platform"></constructor-arg>
+
+<constructor-arg value="12/12/2003"></constructor-arg>
+
+</bean>
+
+<bean id="user1" class="com.Question.User">
+
+<constructor-arg value="1"></constructor-arg>
+
+<constructor-arg value="Arun Kumar"></constructor-arg>
+
+<constructor-arg value="arun@gmail.com"></constructor-arg>
+
+</bean>
+
+<bean id="user2" class="com.Question.User">
+
+<constructor-arg value="2"></constructor-arg>
+
+<constructor-arg value="Varun Kumar"></constructor-arg>
+
+<constructor-arg value="Varun@gmail.com"></constructor-arg>
+
+</bean>
+
+<bean id="q" class="com.Question.Question">
+
+<constructor-arg value="1"></constructor-arg>
+
+<constructor-arg value="What is Java?"></constructor-arg>
+
+<constructor-arg>
+
+<map>
+
+<entry key-ref="answer1" value-ref="user1"></entry>
+
+<entry key-ref="answer2" value-ref="user2"></entry>
+
+</map>
+
+</constructor-arg>
+
+</bean>
+
+</beans>
+
+  
+
+
